@@ -1,6 +1,6 @@
-@AccessControl.authorizationCheck: #CHECK
-@EndUserText.label: 'NovaBev Promotion - Consumption / UI'
-@Metadata.allowExtensions: true
+
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Projection view for promo RAP'
 @Search.searchable: true
 
 @UI.headerInfo: {
@@ -34,7 +34,6 @@ define root view entity ZC_NB_Promotion
       @UI.identification: [{ position: 40 }]
       @UI.selectionField: [{ position: 20 }]
       CompanyCode,
-
       @UI.lineItem: [{ position: 50, importance: #MEDIUM, label: 'Valid From' }]
       @UI.identification: [{ position: 50 }]
       ValidFrom,
@@ -42,7 +41,6 @@ define root view entity ZC_NB_Promotion
       @UI.lineItem: [{ position: 60, importance: #MEDIUM, label: 'Valid To' }]
       @UI.identification: [{ position: 60 }]
       ValidTo,
-
       @UI.lineItem: [{ position: 70, importance: #LOW, label: 'Active?' }]
       @UI.identification: [{ position: 70 }]
       IsActive,
@@ -51,6 +49,5 @@ define root view entity ZC_NB_Promotion
       CreatedBy,
       CreatedAt,
       LastChangedBy,
-      LastChangedAt,
-      LocalLastChangedAt
+      LastChangedAt
 }

@@ -1,10 +1,10 @@
-@AccessControl.authorizationCheck: #CHECK
-@EndUserText.label: 'NovaBev Promotion - Interface View'
-@Metadata.allowExtensions: true
-define root view entity ZI_NB_Promotion
-  as select from znb_promo as p
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: ' Interface view for promotion'
+@Metadata.ignorePropagatedAnnotations: true
+define root view entity ZI_NB_Promotion 
+as select from znb_promo as p
 {
-  key p.promo_id              as PromoId,
+     key p.promo_id           as PromoId,
       p.name                  as Name,
       p.discount_pct          as DiscountPct,
       p.company_code          as CompanyCode,
